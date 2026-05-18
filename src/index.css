@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 35 40% 97%;
+    --foreground: 220 25% 20%;
+
+    --card: 345 0% 80%;
+    --card-foreground: 220 25% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 20%;
+
+    --primary: 210 55% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 35% 92%;
+    --secondary-foreground: 220 25% 25%;
+
+    --muted: 35 20% 94%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 150 38% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 210 55% 52%;
+
+    --radius: 1rem;
+
+    --warm: 25 80% 55%;
+    --warm-foreground: 0 0% 100%;
+    --calm: 210 55% 52%;
+    --calm-light: 210 60% 94%;
+    --safe: 150 38% 45%;
+    --safe-light: 150 40% 93%;
+    --alert: 35 90% 55%;
+    --alert-light: 35 80% 93%;
+    --love: 340 60% 55%;
+    --love-light: 340 60% 94%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --font-display: 'Nunito', sans-serif;
+    --font-body: 'Quicksand', sans-serif;
+  }
+
+  .dark {
+    --background: 220 20% 12%;
+    --foreground: 35 20% 92%;
+    --card: 220 20% 16%;
+    --card-foreground: 35 20% 92%;
+    --popover: 220 20% 16%;
+    --popover-foreground: 35 20% 92%;
+    --primary: 210 55% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 15% 22%;
+    --secondary-foreground: 35 20% 90%;
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 150 38% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 210 55% 58%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display);
+  }
+
+  .text-body {
+    font-family: var(--font-body);
+  }
+
+  .card-calm {
+    @apply bg-card rounded-2xl shadow-md border border-border p-6;
+  }
+
+  .card-feature {
+    @apply bg-card rounded-3xl shadow-lg border border-border p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .btn-big {
+    @apply text-xl font-bold py-5 px-8 rounded-2xl transition-all duration-200;
+  }
+
+  .icon-large {
+    @apply w-12 h-12;
+  }
+
+  .text-patient {
+    @apply text-xl leading-relaxed tracking-wide;
+  }
+}

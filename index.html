@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEMO AI</title>
+    <meta name="description" content="AI-Powered Personal Memory Assistant for Alzheimer's and dementia care" />
+    <meta name="author" content="Roshna Devi R & Lohith Narayan H" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- face-api.js: browser-based face detection & recognition -->
+    <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@1.7.13/dist/face-api.js"></script>
+
+    <!-- TensorFlow.js + COCO-SSD: real-time object detection -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.17.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.2.3/dist/coco-ssd.min.js"></script>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
